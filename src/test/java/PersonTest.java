@@ -31,7 +31,7 @@ public class PersonTest {
 	}
 	@Test
 	public void testSetAge() {
-		p.setAge(30);;
+		p.setAge(30);
 		assertEquals(30,p.getAge());
 	}
 	@Test

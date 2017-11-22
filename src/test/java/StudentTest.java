@@ -32,36 +32,34 @@ public class StudentTest {
 	public void testSetFirstGrade() {
 		
 		s.setFirstGrade(6);
-		assertTrue(s.getFirstGrade() == 6);
+		assertEquals(s.getFirstGrade(),6,0);
 	}
 	@Test
 	public void testSetSecondGrade() {
 		
 		s.setSecondGrade(7);
-		assertTrue(s.getSecondGrade() == 7);
+		assertEquals(s.getSecondGrade(),7,0);
 	}
 	@Test
 	public void testSetThirdGrade() {
 		
 		s.setThirdGrade(8);
-		assertTrue(s.getThirdGrade() == 8);
+		assertEquals(s.getThirdGrade(),8,0);
 	}
 	@Test
 	public void testSetAverageGrade() {
 	
 		s.setAverageGrade(7);
-		assertTrue(s.getAverageGrade() == 7);
+		assertEquals(s.getAverageGrade(),7,0);
 	}
 	
 	@Test
 	public void testCalculateAverage() {
 		
-		s.calculateAverage(6, 7, 8);
-		assertTrue(s.getAverageGrade() == (6+7+8)/3);
-		s.calculateAverage(6);
-		assertTrue(s.getAverageGrade() == (6+s.getSecondGrade()+s.getThirdGrade())/3);
-		s.calculateAverage();
-		assertTrue(s.getAverageGrade() == (s.getFirstGrade()+s.getSecondGrade()+s.getThirdGrade())/3);
+		double result = (6+7+8)/3;
+		assertEquals(s.calculateAverage(6, 7, 8), result,0);
+		assertEquals(s.calculateAverage(6),result,0);
+		assertEquals(s.calculateAverage(),result,0);
 	}
 	
 	@Test
