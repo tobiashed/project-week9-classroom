@@ -39,6 +39,7 @@ public class PersonTest {
 		p.setGender('M');
 		assertEquals('M',p.getGender());
 	}
+	
 
 
 }
