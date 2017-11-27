@@ -39,15 +39,22 @@ public class ClassroomTest {
 	}
 	@Test
 	public void testSetStudents() {
-		
-		cr.setStudents(students);
-		assertTrue(cr.getStudents().equals(students));
+		ArrayList<Student> tempArrayList = new ArrayList<Student>();
+		Student tempStudent = new Student("Temp", "Student", 20, 'M', 8.2, 9.0, 6.0);
+		tempArrayList.add(tempStudent);
+		cr.setStudents(tempArrayList);
+		assertTrue(cr.getStudents().equals(tempArrayList));
 	}
 	@Test
 	public void testAddANewStudent() {
+		ArrayList<Student> tempArrayList = new ArrayList<Student>();
+		ArrayList<Student> tempArrayList2 = new ArrayList<Student>();
+		Classroom tempClassroom = new Classroom("Test", "Autumn", tempArrayList);
+		Student tempStudent = new Student("Temp", "Student", 20, 'M', 8.2, 9.0, 6.0);
+		tempArrayList2.add(tempStudent);
+		tempClassroom.addANewStudent(tempStudent);
+		assertTrue(tempClassroom.getStudents().equals(tempArrayList2));
 		
-		cr.addANewStudent(student1);
-		assertTrue(cr.getStudents().equals(students));
 	}
 	@Test
 	public void testRemoveAStudent() {
