@@ -53,8 +53,9 @@ public class ClassroomTest {
 	public void testRemoveAStudent() {
 		
 		cr.addANewStudent(student1);
+		cr.addANewStudent(student2);
 		cr.removeAStudent("Rafael");
-		assertTrue(student1.getFirstName().equals("Rafael"));
+		assertTrue(students.get(0).getFirstName().equals("Fredrik"));
 		assertTrue(cr.getStudents().equals(students));
 		cr.removeAStudent("Nisse");
 		assertTrue(cr.getStudents().equals(students));
